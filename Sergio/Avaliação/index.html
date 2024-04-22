@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+    <button onclick="venderCanetas(10)">Vender 10 canetas</button>
+    <button onclick="venderLapis(5)">Vender 5 lápis</button>
+    <button onclick="adicionarNovaBorracha(1)">Novo item no inventário (Borracha)</button>
+    <button onclick="imprimirRelatorioVendasDoDia()">Imprimir relatório de vendas do dia</button>
+
+    <div id="resultado"></div>
+
+    <script src="vendas.js"></script>
+
+    <script>
+        // vender canetas e lápis
+        function venderCanetas(qtd) {
+            realizarVenda(qtd, 'caneta');
+        }
+
+        function venderLapis(qtd) {
+            realizarVenda(qtd, 'lápis');
+        }
+
+        // Adicionar item ao inventário (Borracha)
+        function adicionarNovaBorracha() {
+            adicionarNovoProduto('borracha escolar', 2.50, 50);
+        }
+
+        // exibição dos resultados NA PÁGINA
+        function exibirResultado(mensagem) {
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerText = mensagem;
+        }
+    </script>
+</body>
+</html>
