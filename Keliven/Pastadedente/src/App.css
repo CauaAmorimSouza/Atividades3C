@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.Titulo{
+  text-align: center;
+}
+
+header {
+  width: 85vw;
+  background-color: rgb(200, 255, 0);
+  margin: 20px;
+  padding: 20px 60px;
+}
+
+.Banner{
+  display: block;
+  text-align: center;
+}
+
+header h1{
+  color: black;
+  font-size: 50px;
+}
+
+.Sobre{
+  font-size: 30px;
+}
+
+.HeaderGaleria{
+  font-size: 69px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Galeria{
+  column-count: 2;
+  column-gap: 10px;
+}
+
+.imgGaleria{
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  align-items: end;
+}
