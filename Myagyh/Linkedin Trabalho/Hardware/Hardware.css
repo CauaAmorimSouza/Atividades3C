@@ -17,7 +17,8 @@ body {
   
   nav ul {
     list-style-type: none;
-
+    margin: 0;
+    padding: 0;
   }
   
   nav ul li {
@@ -41,13 +42,13 @@ body {
     
     background-color: #010817;
     padding: 10px 20px;
-    text-align: center; 
+    text-align: center;
   }
 
   .login-container {
     max-width: 400px;
     margin: 0 auto;
-    background-color: #010817;
+    background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
   }
@@ -69,7 +70,7 @@ body {
   .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #89ffdc;
+    border: 1px solid #ccc;
     border-radius: 5px;
   }
   
