@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  background-color: #46ACC2;
+  display: flex;
+  padding: 16px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.gallery-container img{
+  width: auto;
+}
+
+footer{
+  background-color: #010817;
+    padding: 10px 20px;
+    text-align: center; 
+}
