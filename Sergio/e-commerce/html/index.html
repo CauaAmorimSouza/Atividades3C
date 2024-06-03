@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>E-Commerce</title>
+</head>
+<body>
+    <header>
+        <div id="hcont">
+            <button id="clog" onclick="criarLogin()">Crie seu login</button>
+            <button onclick="abreTelaLogin()" id="log">Login</button>
+            <h1>Loja dos Heróis Marvel</h1>
+            <a onclick="calcularCesta()" class="car" href="#">Compras <img src="/imagens/carrinho.png" alt="carrinho de compras"></a>
+        </div>
+    </header>
+    <main class="container">
+        <section class="products-container">
+            <h2>Escolha o(s) personagen(s) e clique em comprar</h2>
+            <article class="card">
+                <div class="product-image" id="img-0"></div>
+                <h3 id="nome0">Homem Aranha</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-0"></p>
+                <p>R$ <span id="ha" class="bold">72,90</span></p>
+                <a onclick="compra('qtd-0', 'ha', 0)" class="btn" href="https://www.amazon.com.br/Boneco-Marvel-Olympus-Homem-Aranha/dp/B08H6V6XRH/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2VQT4C5V69G6V&dib=eyJ2IjoiMSJ9.AcEYyARyaRs0aZJ72dppVSsD8TRVZKxwYvvTHAGD8EJym06QeKnX11dwoPkxHRgHZJieD4NzLLtsquFopgzlEaplHH0xH7H4gx56vLvpJfd_Ds6z2pzjNTavNePnvsGSDIC2FSdCwjHmCKpTah_leHA_9hoWdKJnmVN3WR0Shke8E9ijrpJiYoO550eZD-v8pZbJIfHi-o9WL7G3j-nQxl88mGlimKEGq1SCU5TmaW9i4Q9oFVI3CCjHtKFmvIhodsgGCnyPbTHfYndiaH2emyDF1m28sG_DcrWZFVK3baM.Y3gBvOICdI5aoqn4shYcMmwOpoUZuDYGceEQ8zUgbWw&dib_tag=se&keywords=Boneco+homem+aranha&qid=1717414829&sprefix=boneco+homem+aranh%2Caps%2C205&sr=8-5" target="_blank">Comprar</a>
+            </article>
+            <article class="card">
+                <div class="product-image" id="img-1"></div>
+                <h3 id="nome0">Thor</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-1"></p>
+                <p>R$ <span id="th" class="bold">86,99</span></p>
+                <a onclick="compra('qtd-1', 'th', 1)" class="btn" href="https://www.amazon.com.br/Marvel-Avengers-Titan-Hero-Figura/dp/B0CHZ2J5FQ/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1SZ2F44GBULLP&dib=eyJ2IjoiMSJ9.wQH1goEbW2lGQNG4nVd2r8Jy4FwXzVVYx_Xgy0ynaUZYSQxWroYgTgML5jge362Umsm0t841l6rqscq_34Bf081YDjOyuQ6ad4JN_a69s50XLgN6OYRfDeo0uftEba5CP59s-M2CjoTRuHkcbBLXm_27EhurA3EIIIY-lkQzP6kYZpTqESheceoQo6AUfQTz-nWJ--cAeKW6aq8drMlkcsoZTkqTa4WuM8i4FqIQytR_UM2Y53n5ry7HMvcHD9uUkuSsblwW0-awfyqf5_H0hP8duTD-A7JomyjLSD-JNJ0.VKfzmj-vXDmHPYvuHAXN-CdGLsbMbv2lE2EWzpUzBEs&dib_tag=se&keywords=Boneco+thor&qid=1717415100&sprefix=boneco+tho%2Caps%2C193&sr=8-2" target="_blank">Comprar</a>
+            </article>
+            <article class="card">
+                <div class="product-image" id="img-2"></div>
+                <h3 id="nome0">Hulk</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-2"></p>
+                <p>R$ <span id="hu" class="bold">288,00</span></p>
+                <a onclick="compra('qtd-2', 'hk', 2)" class="btn" href="https://www.amazon.com.br/BONECO-HULK-PREMIUM-GIGANTE-BRINQUEDOS/dp/B07B9GH9WJ/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3PSMKRHOYGM09&dib=eyJ2IjoiMSJ9.bAS8jV5YzOAf-V-am5scDTMXskHo7Tm_0Qkp-a40FHj78J0npK_qRQ2r0TJsV4kwe3YzYP5yqJDuPxjitFNVpTxmdQyVvYitlLP1Gbt_1BDQJgCENgCnl-Ok2mRR73A0D9lxE2Z3a6Ia6Bpne9j6G2ccMxWOOBFg0B3twlvF39Y9eq--WNzlOzh7VVxGWzojWrtBv3gqN8DpEgz8EwIX91TegvRuXvIYYPp4QpZnA4UOHWpIq4pkCa4P-v-dnwweK4rY138g_YycMF0CXZ0P4NttQay84imqyVDEAVsU-bg.VHNBuGOfoRtBGA24-5p_7wDUSC09L9YwKu_zR2Ljn4E&dib_tag=se&keywords=Boneco+hulk&qid=1717415270&sprefix=boneco+hulk%2Caps%2C191&sr=8-4&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74" target="_blank">Comprar</a>
+            </article>
+            <article class="card">
+                <div class="product-image" id="img-3"></div>
+                <h3 id="nome0">Homem de Ferro</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-3"></p>
+                <p>R$ <span id="hf" class="bold">229,99</span></p>
+                <a onclick="compra('qtd-3', 'hf', 3)" class="btn" href="https://www.amazon.com.br/Boneco-Marvel-Legends-Figura-acess%C3%B3rios/dp/B0BS4QVFVH/ref=sr_1_6?crid=209BJ8B814DTP&dib=eyJ2IjoiMSJ9.7HLooH8jFwqGRTPHWCwNLJQR5WcUP8YpIaIypTTZU4Csm2u7fC8SiEVx49_7y2p8wsXUVbqmQfVbjf3aPAd29wMWQHGjK4QtEpJMSaNWnfaG06UeR5vlnC0A3RbRWGdKy_xEtkjd5g9kz20fVZ744VPO4EPm6u4eXgJeFGNATW61kQyowT0HTEjQpngZ1hLI8QpQ3OKRuML5WNBSVqga8Kqgt1MiPlpv442z1jNmhiRGx42RsqrPSQloh3Bkp9z80oQcMEvJ0pZVhXcBrKKh1FdHbalRVrHaweVAKJt9WRk.GIcX7DFG98C22tsAdiKFq6M15SxCgVYaUdiO5RCmXjY&dib_tag=se&keywords=boneco%2Bhomem%2Bde%2Bferro&qid=1717415456&sprefix=Boneco%2BHomem%2Caps%2C196&sr=8-6&ufe=app_do%3Aamzn1.fos.6a09f7ec-d911-4889-ad70-de8dd83c8a74&th=1" target="_blank">Comprar</a>
+            </article>
+            <article class="card">
+                <div class="product-image" id="img-4"></div>
+                <h3 id="nome0">Capitão América</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-4"></p>
+                <p>R$ <span id="ca" class="bold">67,99</span></p>
+                <a onclick="compra('qtd-4', 'ca', 4)" class="btn" href="https://www.amazon.com.br/Boneco-Marvel-Mighty-Hero-Capit%C3%A3o/dp/B0C4727H9R/ref=sr_1_3?crid=107HNWFULFHBI&dib=eyJ2IjoiMSJ9.VmnP25Nut63ffB0SWBbmFvy0xSobkCXWF3QJJqTKbQbiS3Ile8j3veVKbC6iYO28rLG8N-LNSYAImeJgVoDKgNDmjskEH3WInNRWOkBdF-hNOUUgQAAqQAgRT4oKjPepuRW93tFIDuQ9TKetO41gHhwyCcoUHByt5GLn74rNzbUQKQswz646bWD04a56qRmW1w1SAyWHcxY5y3fJQP6XQew2moGSCaZWDeMke2BIoEHA85rKKIyFfFzDbmOwa0837BtpJ0eetEzDuS7G4mCmNOMPNI1iCGzOC9atWaUzhH4.QBjd1MJlAzQsE5OcU8VXnsgagUo95T2LO6G0qt5oTWE&dib_tag=se&keywords=boneco+capitao+america&qid=1717415550&sprefix=Boneco+cap%2Caps%2C188&sr=8-3" target="_blank">Comprar</a>
+            </article>
+            <article class="card">
+                <div class="product-image" id="img-5"></div>
+                <h3 id="nome0">Capitã Marvel</h3>
+                <p>Qtd: <input type="number" min="1" max="10" value="1" id="qtd-5"></p>
+                <p>R$ <span id="cm" class="bold">64,90</span></p>
+                <a onclick="compra('qtd-5', 'ca', 5)" class="btn" href="https://www.amazon.com.br/Boneco-Capit%C3%A3-Hasbro-Vingadores-Avengers/dp/B0845Z96QY/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1YCEAT7YM9LQG&dib=eyJ2IjoiMSJ9.gr5VZIJ2KDmO2_a8UShjTyInYpzopPkwgdTeF0sRSUBeeF9g7qhQp-yqT914EfPO6OOcLXM0CqFhZMpmhMZgRwu7mxjEDA5qDkXMi6Ac2XIc6dw-Di5hCZbdRJnH45Qjp_yFlV1iGoipL71NnHdNcROf6WGPaqE70zJt0xx7ZVEDgeZUGZWyCQD0WYQgVxdo3fNe8g9Xl69OXU8NbXtGCY7Omlo64CYNWvQmwreyIEkY5f0O0Jkqmm3zhurWQMXuJwk1zW3OKIKZhTRcMIzJwYcFa14A2ECB4F-EfW9ea3I.NNAB3ufJN6vg-znTVWZ-wD9mOMYl4m2XF5VIu8jeF0s&dib_tag=se&keywords=boneco+capit%C3%A3+marvel&qid=1717415665&sprefix=boneco+capita+marvel%2Caps%2C241&sr=8-5" target="_blank">Comprar</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>Informações sobre o site</h2>
+        <p><span class="bold">Heróis Marvel</span>&copy; 2024</p>
+    </footer>
+</body>
+</html>

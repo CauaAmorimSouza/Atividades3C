@@ -1,0 +1,17 @@
+button{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    vertical-align: top;
+    border-style: none;
+}
+
+.Casa1{
+    color: white;
+    background-color: rgb(226, 219, 219);
+}
+
+.Casa2{
+    color: black;
+    background-color: black;
+}
