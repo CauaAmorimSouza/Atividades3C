@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    padding: 100px;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    background-color: black;
+}
+
+footer{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+}
+
+.pokemon{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.pokemon img{
+    height: 300px;
+    width: 300px;
+}
+
+.Proximo{
+    width: 150px;
+    height: 150px;
+    margin-left: 1000px;
+}
+
+.Anterior{
+    width: 150px;
+    height: 150px;
+}
+
+
