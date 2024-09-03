@@ -125,8 +125,8 @@ const AccountScreen = () => {
 
 const styles = StyleSheet.create({
   logo: {
-    width: 200,
-    height: 60,
+    width: 1000,
+    height: 150,
     backgroundColor: 'transparent',
     marginBottom: 30,
     resizeMode: 'contain',
