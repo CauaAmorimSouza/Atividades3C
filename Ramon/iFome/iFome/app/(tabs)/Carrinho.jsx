@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useCart } from './CartContext'; // Importa o contexto
+import { useCart } from './CartContext';
 
 function Cart() {
   const router = useRouter();
-  const { ItensCarrinho } = useCart(); // Acessando o estado do carrinho
+  const { ItensCarrinho } = useCart();
 
   const total = ItensCarrinho.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -27,7 +27,7 @@ function Cart() {
             )}
           />
           <Text style={styles.totalText}>Total: R$ {total.toFixed(2)}</Text>
-          <Pressable style={styles.button} onPress={() => {/* Lógica de finalizar compra */}}>
+          <Pressable style={styles.button} onPress={() => {}}>
             <Text style={styles.buttonText}>Finalizar Compra</Text>
           </Pressable>
         </>

@@ -1,16 +1,13 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Cria o contexto do Carrinho
+
 const CartContext = createContext();
 
-// Hook para usar o contexto do carrinho
 export const useCart = () => useContext(CartContext);
 
-// Provedor do contexto do Carrinho
 export const CartProvider = ({ children }) => {
   const [ItensCarrinho, setItensCarrinho] = useState([]);
 
-  // Função para adicionar itens ao carrinho
   const addToCart = (product) => {
     setItensCarrinho((prevCart) => {
       const itemExistente = prevCart.find((item) => item.id === product.id);
@@ -24,7 +21,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Função para limpar o carrinho
   const clearCart = () => {
     setItensCarrinho([]);
   };

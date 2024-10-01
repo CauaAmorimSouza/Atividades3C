@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { Link } from 'expo-router';
-import { useCart } from './CartContext'; // Usa o contexto do carrinho
+import { useCart } from './CartContext'; 
 
 const products = [
   { id: '1', name: 'Big Mac', price: 32.5, image: 'https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXCTbnv/200/200/original?country=br', description: 'McDonalds - Kobrasol' },

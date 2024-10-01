@@ -1,6 +1,6 @@
 import React from 'react';
-import { CartProvider } from './CartContext'; // Usa o CartContext criado
-import { Stack } from 'expo-router'; // Usa o stack do expo-router
+import { CartProvider } from './CartContext'; 
+import { Stack } from 'expo-router'; 
 
 const Layout = () => {
   return (
