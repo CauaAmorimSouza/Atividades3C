@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { Link } from 'expo-router';
-import { useCart, CartProvider } from './CartContext'; 
+import { useCart } from './CartContext'; // Usa o contexto do carrinho
 
 const products = [
   { id: '1', name: 'Big Mac', price: 32.5, image: 'https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXCTbnv/200/200/original?country=br', description: 'McDonalds - Kobrasol' },
@@ -37,13 +37,8 @@ function Home() {
   );
 }
 
-export default function iFome() {
-  return (
-    <CartProvider>
-      <Home />
-    </CartProvider>
-  );
-}
+export default Home;
+
 
 const styles = StyleSheet.create({
     container: {

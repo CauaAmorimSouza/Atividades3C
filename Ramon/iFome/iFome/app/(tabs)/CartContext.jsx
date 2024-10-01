@@ -1,33 +1,37 @@
 import React, { createContext, useContext, useState } from 'react';
 
+// Cria o contexto do Carrinho
 const CartContext = createContext();
 
-export function useCart() {
-  return useContext(CartContext);
-}
+// Hook para usar o contexto do carrinho
+export const useCart = () => useContext(CartContext);
 
-export function CartProvider({ children }) {
-  const [ItensCarrinho, setCartItems] = useState([]);
+// Provedor do contexto do Carrinho
+export const CartProvider = ({ children }) => {
+  const [ItensCarrinho, setItensCarrinho] = useState([]);
 
+  // Função para adicionar itens ao carrinho
   const addToCart = (product) => {
-    setCartItems((prevItems) => {
-      const existingItem = prevItems.find(item => item.id === product.id);
-      if (existingItem) {
-        return prevItems.map(item =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+    setItensCarrinho((prevCart) => {
+      const itemExistente = prevCart.find((item) => item.id === product.id);
+      if (itemExistente) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
-        return [...prevItems, { ...product, quantity: 1 }];
+        return [...prevCart, { ...product, quantity: 1 }];
       }
     });
   };
 
-  const value = {
-    ItensCarrinho,
-    addToCart,
+  // Função para limpar o carrinho
+  const clearCart = () => {
+    setItensCarrinho([]);
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-}
+  return (
+    <CartContext.Provider value={{ ItensCarrinho, addToCart, clearCart }}>
+      {children}
+    </CartContext.Provider>
+  );
+};

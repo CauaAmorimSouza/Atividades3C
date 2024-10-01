@@ -1,8 +1,7 @@
-// App/tabs/iFome/Carrinho.jsx
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useCart, CartProvider } from './CartContext'; // Importa o contexto
+import { useCart } from './CartContext'; // Importa o contexto
 
 function Cart() {
   const router = useRouter();
@@ -42,14 +41,8 @@ function Cart() {
   );
 }
 
-// Envolver o componente Cart com o CartProvider
-export default function Carrinho() {
-  return (
-    <CartProvider>
-      <Cart />
-    </CartProvider>
-  );
-}
+export default Cart;
+
 
 const styles = StyleSheet.create({
     container: {
